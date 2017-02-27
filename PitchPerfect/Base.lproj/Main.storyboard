@@ -12,7 +12,7 @@
         <!--Record Sounds View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Record Sounds View Controller" id="BYZ-38-t0r" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Record Sounds View Controller" id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HjV-CO-b9H">
-                                <rect key="frame" x="109.5" y="256" width="155" height="155"/>
+                                <rect key="frame" x="110" y="256" width="155" height="155"/>
                                 <state key="normal" image="RecordButton"/>
                                 <connections>
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e3b-f0-6Fh"/>
@@ -35,11 +35,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khu-Wk-oeC">
-                                <rect key="frame" x="110" y="448" width="155" height="155"/>
+                                <rect key="frame" x="153" y="448" width="70" height="70"/>
                                 <state key="normal" image="Stop"/>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nT0-G9-vxW"/>
-                                    <segue destination="LHo-KF-Tl4" kind="show" id="WBn-Sd-bgB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -58,16 +57,17 @@
                         <outlet property="recordButton" destination="HjV-CO-b9H" id="3WJ-MJ-jay"/>
                         <outlet property="recordingLabel" destination="ocC-p6-PoB" id="FKc-uR-MkO"/>
                         <outlet property="stopRecordingButton" destination="Khu-Wk-oeC" id="nGW-jf-57c"/>
+                        <segue destination="LHo-KF-Tl4" kind="show" identifier="stopRecording" id="Oya-ax-agS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="972" y="38.23088455772114"/>
         </scene>
-        <!--View Sounds View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="9vm-ew-zIh">
             <objects>
-                <viewController title="View Sounds View Controller" id="LHo-KF-Tl4" sceneMemberID="viewController">
+                <viewController title="Play Sounds View Controller" id="LHo-KF-Tl4" customClass="PlaySoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1yH-yw-PYV"/>
                         <viewControllerLayoutGuide type="bottom" id="0md-zo-Bz5"/>
@@ -103,6 +103,6 @@
     </scenes>
     <resources>
         <image name="RecordButton" width="155" height="155"/>
-        <image name="Stop" width="155" height="155"/>
+        <image name="Stop" width="70" height="70"/>
     </resources>
 </document>
